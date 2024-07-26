@@ -1,0 +1,164 @@
+html{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 0px;
+    height: 2px;
+    transition: all .5s;
+}
+a:hover:after {
+    width: 100%;
+    background: white;
+}
+button{
+    border: none;
+    border-radius: 20px;
+}
+button a{
+    color: black;
+    font-size:medium ;
+}
+.puesto{
+    color: rgb(88, 13, 13);
+    font-weight: 800;
+}
+.fecha{
+    color: gray;
+    font-style: italic;
+}
+.academico{
+    color: rgb(88, 13, 13); 
+}
+.academico h6{
+    color: gray;
+    text-align: left;
+    margin-left: 10%;
+}
+nav{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    grid-gap: 20px;
+    width: 20%;
+    max-width: 200px;
+    height: 100%;
+    left: 4%;
+    padding: 0 2% 0 2%;
+    font-family: monospace;
+    position: fixed;
+    background: linear-gradient(180deg,rgb(21, 67, 96),gray,lightblue);
+}
+    #boton{
+        display: none;
+    }
+    .perfil{
+        width: 100%;
+        max-width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: url("img/perfil.jpeg");
+        background-position: center;
+        background-size: cover;
+        box-shadow: 3px 5px 5px rgb(0, 0, 0, .8);
+    }
+    #social{
+        display: flex;
+        align-items: center;
+    }
+    #social div{
+        text-align: center;
+    }
+    main{
+        display: grid;
+        align-items: center;
+        margin-left: 30%;
+        padding: 0;
+        height: 100%;
+    }
+    #personal{
+        display: grid;
+        height: 100%;
+        align-content: center;
+        margin: 0;
+    }
+    #personal #name {
+        position: relative;
+        float: left;
+        background: linear-gradient(270deg,rgb( 21,67,96),lightblue);
+        -webkit-background-clip: texcert;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #personal #name span{
+        position:absolute;
+        right:0;
+        width:0;
+        background-color: whitesmoke;
+        border-left: 1px solid #000;
+        animation: escribir 5s steps(30) infinite alternate;
+    }
+
+    .certificados{
+        display: grid;
+        align-content: center;
+        grid-gap: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .card{
+        width: 100%;
+        height: 300px;
+        border-radius: 5px;
+        background: var(--i);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(1.1);
+        mix-blend-mode: multiply;
+        box-shadow: 5px 10px 5px rgba(112, 110, 110, 0.8);
+    }
+    .reverso{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: .5s;
+    }
+    .reverso a:hover{
+        color:red;
+    }
+    .card:hover .reverso{
+        color: red;
+        opacity: 1;
+    }
+
+@keyframes escribir {
+    from {width:0;}
+    to {width:100%;}
+}
